@@ -317,16 +317,16 @@ section{
     width: 90%;
 }
 .progress-line.css span{
-    width: 80%;
+    width: 75%;
 }
 .progress-line.javascript span{
     width: 85%;
 }
 .progress-line.python span{
-    width: 50%;
+    width: 80%;
 }
 .progress-line.react span{
-    width: 75%;
+    width: 85%;
 }
 .progress-line span::after{
     position: absolute;
@@ -344,16 +344,16 @@ section{
     content: "90%";
 }
 .progress-line.css span::after{
-    content: "80%";
+    content: "75%";
 }
 .progress-line.javascript span::after{
     content: "85%";
 }
 .progress-line.python span::after{
-    content: "50%";
+    content: "80%";
 }
 .progress-line.react span::after{
-    content: "75%";
+    content: "85%";
 }
 .progress-line span::before{
     content: "";
@@ -640,3 +640,6 @@ section{
     margin: -30px;
 }
 
+.bar i {
+    margin-right: 12px; /* space between icons */
+}
