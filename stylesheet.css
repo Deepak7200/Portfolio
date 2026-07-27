@@ -598,26 +598,6 @@ section{
     color: #fff;
 }
 
-/* .btn-box {
-    display: inline-block;
-    padding: 12px 24px; 
-    margin-top: 30px; 
-    background: rgba(0, 238, 255, 255); 
-    color: rgba(8, 27, 41, 255); 
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(3, 44, 113, 255);
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-} */
-
-/* .btn-box:hover {
-    background: rgba(0, 190, 230, 255);
-    box-shadow: 0 6px 8px rgba(3, 44, 113, 255);
-    transform: translateY(-3px); 
-    text-decoration: none;
-} */
-
 .contact-title{
     color: #0ef;
     padding: 30px;
@@ -642,4 +622,62 @@ section{
 
 .bar i {
     margin-right: 12px; /* space between icons */
+}
+
+/* Slider Styles */
+.slider-container{
+    width:80%;
+    max-width:1200px;
+    margin:auto;
+    position:relative;
+}
+
+.slider{
+    width:100%;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    gap:20px;
+    transition:.5s;
+}
+
+.card{
+    flex:0 0 calc((100% - 40px)/3);
+    height:415px;
+    border-radius:15px;
+}
+
+
+
+.card:nth-child(1){background:#ff6b6b;}
+.card:nth-child(2){background:#4ecdc4;}
+.card:nth-child(3){background:#45b7d1;}
+.card:nth-child(4){background:#f7b731;}
+.card:nth-child(5){background:#5f27cd;}
+.card:nth-child(6){background:#20bf6b;}
+.card:nth-child(7){background:#eb3b5a;}
+.card:nth-child(8){background:#3867d6;}
+
+.btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:none;
+    background:#222;
+    color:#fff;
+    cursor:pointer;
+    z-index:10;
+}
+
+.prev{
+    left:-70px;
+}
+
+.next{
+    right:-70px;
 }
