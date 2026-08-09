@@ -4,10 +4,14 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+html{
+    overflow-x: hidden;
+}
 body{
     color: #ededed;
     background: #081b29;
     margin-top: 15px;
+    overflow-x: hidden;
 }
 .header{
     position: fixed;
@@ -30,6 +34,11 @@ body{
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .navbar a{
     display: inline-block;
@@ -140,13 +149,17 @@ body{
     align-items: center;
     gap: 1.5rem;
 }
+.about-img{
+    display: flex;
+    justify-content: center;
+}
 .about-img img{
     /* padding: 50px; */
     padding-bottom: 20%;
     max-width: 370px;
     height: auto;
     width: 100%;
-    border-radius: 8px; 
+    border-radius: 8px;
     margin: 100px;
 }
 .about-text h2{
@@ -254,11 +267,12 @@ section{
     flex-wrap: wrap;
 }
 .container1{
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 500px;
     padding: 75px 90px;
-    margin-left: 120px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 .heading1{
     text-align: center;
@@ -317,7 +331,7 @@ section{
     width: 90%;
 }
 .progress-line.css span{
-    width: 75%;
+    width: 80%;
 }
 .progress-line.javascript span{
     width: 85%;
@@ -344,7 +358,7 @@ section{
     content: "90%";
 }
 .progress-line.css span::after{
-    content: "75%";
+    content: "80%";
 }
 .progress-line.javascript span::after{
     content: "85%";
@@ -381,34 +395,24 @@ section{
     justify-content: space-evenly;
     align-items: flex-start;
 } */
-.radial-bars {
-    width: 50%;
-    height: 170px;
-    margin-bottom: 10px;
-    position: relative;
-}
-.radial-bars .radial-bar{
-    width: 50%;
-    height: 170px;
-    margin-bottom: 10px;
-    position: relative;
-    
-}
 .container2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 500px;
     padding: 75px 90px;
-    margin-left: 120px;
+    margin: 0 auto;
 }
 
 .radial-bars {
     position: relative;
     width: 120px;
     height: 120px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -680,4 +684,286 @@ section{
 
 .next{
     right:-70px;
+}
+
+#skill{
+    margin: 40px;
+}
+
+/* ===================================================
+   RESPONSIVE MEDIA QUERIES
+   Breakpoints: 1200px (large tablets/small laptops),
+   991px (tablets), 768px (large phones/small tablets),
+   480px (phones)
+   =================================================== */
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px){
+    .container{
+        padding: 60px 5%;
+    }
+    .card{
+        flex:0 0 calc((100% - 40px)/2); /* 2 cards per view */
+    }
+    .prev{
+        left: 10px;
+    }
+    .next{
+        right: 10px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px){
+    .header{
+        padding: 18px 5%;
+    }
+    .navbar a{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .home{
+        padding: 100px 5% 0;
+    }
+    .home-content{
+        max-width: 100%;
+    }
+    .home-content h1{
+        font-size: 44px;
+    }
+    .home-content h3{
+        font-size: 26px;
+    }
+    .home-content p{
+        font-size: 18px;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-img img{
+        margin: 40px auto;
+        max-width: 280px;
+        padding-bottom: 0;
+    }
+    .about-text h2{
+        font-size: 44px;
+    }
+    .about-text h4{
+        font-size: 22px;
+    }
+    .about-text p{
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    .sub-title,
+    .project-title{
+        font-size: 42px;
+        padding: 30px;
+    }
+    .container{
+        padding: 50px 5%;
+    }
+    section{
+        justify-content: center;
+    }
+    .container1{
+        padding: 50px 30px;
+        margin: 0 auto 30px;
+    }
+    .container2{
+        padding: 30px;
+    }
+    .slider-container{
+        width: 90%;
+    }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 768px){
+    body{
+        margin-top: 0;
+    }
+    .header{
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .navbar{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .navbar a{
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    .home{
+        background-image: none;
+        height: auto;
+        min-height: 100vh;
+        padding: 140px 6% 60px;
+        text-align: center;
+        justify-content: center;
+    }
+    .home-content h1{
+        font-size: 34px;
+    }
+    .home-content h3{
+        font-size: 20px;
+    }
+    .home-content p{
+        font-size: 16px;
+    }
+    .home-sci{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn-box{
+        margin-top: 10px;
+    }
+    .about-text h2{
+        font-size: 34px;
+    }
+    .about-text h4{
+        font-size: 18px;
+    }
+    .about-text p{
+        font-size: 16px;
+    }
+    .sub-title,
+    .project-title{
+        font-size: 32px;
+        padding: 20px;
+    }
+    .services-list{
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        margin-top: 30px;
+    }
+    .container1, .container2{
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+    .radial-bars{
+        width: 100px;
+        height: 100px;
+    }
+    .radial-bars svg{
+        width: 100px;
+        height: 100px;
+    }
+    .contact{
+        padding: 30px 5%;
+    }
+    .contact-container h2{
+        font-size: 28px;
+    }
+    .contact-container h4{
+        font-size: 16px;
+    }
+    .info-item{
+        flex: 1 1 100%; /* stack contact items */
+        min-width: unset;
+    }
+    .card{
+        flex:0 0 100%; /* 1 card per view */
+        height: 320px;
+    }
+    .slider-container{
+        width: 85%;
+    }
+    .btn{
+        width: 40px;
+        height: 40px;
+    }
+    .prev{
+        left: 0;
+    }
+    .next{
+        right: 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px){
+    .header{
+        padding: 12px 5%;
+    }
+    .logo{
+        font-size: 18px;
+    }
+    .navbar a{
+        font-size: 14px;
+        margin: 0 6px;
+    }
+    .home {
+        background-image: none;
+    }
+    .home-content h1{
+        font-size: 28px;
+    }
+    .home-content h3{
+        font-size: 17px;
+    }
+    .home-content p{
+        font-size: 14px;
+    }
+    .home-sci a{
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+        margin: 20px 8px 20px 0;
+    }
+    .btn-box{
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+    .about-text h2{
+        font-size: 26px;
+    }
+    .about-text h4{
+        font-size: 16px;
+    }
+    .about-text p{
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+    }
+    .about-img img{
+        max-width: 220px;
+        margin: 20px auto;
+    }
+    .sub-title,
+    .project-title{
+        font-size: 24px;
+        padding: 15px;
+    }
+    .container{
+        padding: 30px 4%;
+    }
+    .services-list div{
+        padding: 25px;
+    }
+    .services-list div h2{
+        font-size: 22px;
+    }
+    .card{
+        height: 260px;
+    }
+    .contact-container h2{
+        font-size: 22px;
+    }
+    .info-item{
+        padding: 20px;
+    }
+    .info-item h5{
+        font-size: 17px;
+    }
+    .info-item p{
+        font-size: 14px;
+    }
 }
