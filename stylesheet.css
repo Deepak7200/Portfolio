@@ -197,7 +197,7 @@ body{
 .project-title{
     text-align: center;
     font-size: 60px;
-    padding: 60px;
+    padding: 30px;
 }
 .project-title span{
     color: #0ef;
@@ -237,6 +237,9 @@ body{
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+}
+.project-container{
+    text-align: center;
 }
 .read{
     display: inline-block;
@@ -686,9 +689,18 @@ section{
     right:-70px;
 }
 
-#skill{
+#projects h1{
+    margin-top: -100px;
+}
+
+#contact{
+    margin: 80px;
+}
+
+.contact-container h1{
     margin: 40px;
 }
+
 
 /* ===================================================
    RESPONSIVE MEDIA QUERIES
