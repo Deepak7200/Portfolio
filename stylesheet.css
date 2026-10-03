@@ -19,8 +19,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    /* background: #051129; */
-    background-color: #071923;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -537,7 +536,6 @@ section{
 }
 
 .contact {
-    padding: 50px;
     background: rgba(8, 27, 41, 255); /* Dark background */
     color: #fff; /* Light text for contrast */
 }
