@@ -659,14 +659,20 @@ section{
     flex: 0 0 calc(33.333% - 20px);
     margin: 0 10px;
 
-    background: #ffffff;
+    background: #081B29;
     border-radius: 15px;
     overflow: hidden;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-
     display: flex;
     flex-direction: column;
+
+    /* Cyan border */
+    border: 1px solid #00d9ff;
+
+    /* Subtle cyan glow */
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.35),
+        0 0 18px rgba(0, 217, 255, 0.20);
 }
 
 /* -------------------------
@@ -696,7 +702,7 @@ section{
 .slide-heading h2 {
     margin: 0;
     font-size: 22px;
-    color: #222;
+    color: #00EEFF;
 }
 
 /* -------------------------
@@ -710,7 +716,7 @@ section{
 .slide-content p {
     margin: 0;
     line-height: 1.6;
-    color: #666;
+    color: #ffffff;
 }
 
 /* -------------------------
