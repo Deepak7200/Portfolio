@@ -19,7 +19,8 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #051129;
+    /* background: #051129; */
+    background-color: #071923;
     display: flex;
     justify-content: space-between;
     align-items: center;
